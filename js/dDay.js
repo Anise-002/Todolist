@@ -56,6 +56,7 @@
         localStorage.removeItem(D_TITLE);
         dDayForm.classList.remove(HIDDEN);
         dDayTextCon.classList.add(HIDDEN);
+        dDayForm.addEventListener("submit", dDaySubmit);
     }
     
     reSetBtn.addEventListener('click',resetHandler);
