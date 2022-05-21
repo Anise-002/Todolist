@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Rock+Salt&family=Shrikhand&display=swap');
+/* font-family: 'Kaushan Script', cursive;
+font-family: 'Rock Salt', cursive;
+font-family: 'Shrikhand', cursive; */
+
+
+body{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transition: 1.5s linear;
+}
+/* 로그인 섹션 */
+.login-container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Shrikhand', cursive;
+    background: url(../img/0.jpg) no-repeat;
+    background-size: cover;
+}
+.login-container form{
+    display: flex;
+    width: 30vw;
+    height: 45vh;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    box-shadow: 3px 3px 10px rgba(0 , 0 ,0, 0.42);
+    padding: 0 20px;
+}
+.login-container form input{
+    width: 60%;
+    height: 30px;
+    text-align: center;
+    border: none;
+    border-radius: 30px;
+    box-shadow: inset 2px 2px 5px rgba(0 , 0 ,0, 0.42);
+    
+}
+
+.login-container form button{
+    width: 30%;
+    height: 30px;
+    border: none;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 2px 2px 5px rgba(0 , 0 ,0, 0.42);
+    cursor: pointer;
+    background-color: aquamarine;
+}
+
+/* 공통 CSS */
+.hidden{
+    display: none;
+}
+.boxstyle{
+    background-color: rgba(255, 255, 255, 0.518);
+    border-radius: 25px;
+    box-shadow: 2px 2px 5px rgba(0 , 0 ,0, 0.42);
+    padding: 20px;
+}
+.smallbox{
+    width: 275px;
+    height: 275px;
+}
+.bigbox{
+    width: 560px;
+    height: 560px;
+}
+.sidebox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+.bignumber{
+    font-size: 100px;
+    color: #343232;
+    text-shadow: rgba(255,255,255,0.5) 0px 2px 2px;
+}
+.button{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 160px;
+    padding: 10px 45px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 2px 2px 5px rgba(0 , 0 ,0, 0.42);
+    background-color: aquamarine;
+    transform: translateX(-50%);
+    font-family: 'Kaushan Script', cursive;
+    cursor: pointer;
+}
+/* todolist-section */
+
+.todolist-container{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Shrikhand', cursive; 
+}
+#todolist-content{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.uesername{
+    text-align: center;
+}
+.uesername h1{
+    font-family: 'Shrikhand', cursive;
+    font-size: 170px;
+    margin-top: 25px
+}
+.uesername p{
+    font-family: 'Rock Salt', cursive;
+    font-size: 50px;
+    color: red;
+    margin-top: -130px;
+}
+/* ////////todolis-section//////// */
+#todolist-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+#todolist-section h3{
+    font-size: 45px;
+}
+#todolist-section .line{
+    width: 80%;
+    height: 1px;
+    background-color: black;
+    margin: 20px 0;
+}
+#todolist-section .todolist-input-form input{
+    width: 430px;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: inset 2px 2px 5px rgba(0 , 0 ,0, 0.42);
+    text-align: center;
+}
+
+/* ////////date-section//////// */
+#date-section .date{
+    font-family: 'Kaushan Script', cursive;
+}
+#date-section .month{
+    margin-top: -15px;
+}
+#date-section .days{
+    margin-top: -70px;
+}
+#date-section .time{
+    font-family: 'Kaushan Script', cursive;
+    margin-top: -20px;
+    
+}
+/* ////////d-day-section//////// */
+#d-day-section{
+    position: relative;
+}
+#d-day-section h3{
+    font-size: 45px;
+}
+#d-day-section form {
+    
+    
+}
+#d-day-section form .title{
+    font-family: 'Shrikhand', cursive;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    box-shadow: inset 2px 2px 2px rgba(0 , 0 ,0, 0.42);
+    padding-top: 5px;
+    margin-top: 10px;
+}
+#d-day-section form .select-date{
+    border: none;
+    border-radius: 20px;
+    box-shadow: inset 2px 2px 2px rgba(0 , 0 ,0, 0.42);
+    font-family: 'Shrikhand', cursive;
+    padding: 10px 20px;
+    margin-top: 25px;
+
+}
+
+#d-day-section .text-content span:nth-child(1){
+    display: block;
+    margin-top: 0px;
+}
+#d-day-section .text-content span:nth-child(2){
+    display: block;
+    margin-top: -20px;
+}

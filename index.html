@@ -4,57 +4,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TODO list</title>
-    <link rel="stylesheet" href="style.css">
+    <title>TODONOTE</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/darkmode.css">
 </head>
-<body>
+<body data-mode="white">
+<!-- 설정 버튼 -->
+    <div class="setting">
+        <div></div>
+        <div></div>
+    </div>
+<!-- 로그인창 -->
     <section class="login-container">
         <form>
             <h2>HELLO!<br> WELCOME TO TODONOTE!</h2>
             <p>what's your nickname?</p> 
-            <input minlength="3" type="text" placeholder="Please, wirte here !">
+            <input minlength="1" maxlength="10" required type="text" placeholder="Please, wirte here !">
             <button type="submit">LOGIN</button>
         </form>
     </section>
+<!-- 로그인 후 창 -->
     <section class="todolist-container hidden">
-        <h1></h1>
-        <span>welcome!</span>
-        <article id="date-section">
-            <p class="month"></p>
-            <p class="date"></p>
-            <p class="times"></p>
+        <article class="uesername">
+            <h1></h1>
+            <p>welcome!</p>
         </article>
-        <article id="weather-section">
-
-        </article>
-        <article id="todolist-section">
-            <h3>TODO LIST</h3>
+        <!-- todolist -->
+        <div id="todolist-content">
+            <!-- left -->
+            <div class="sidebox">
+                <article id="date-section" class="boxstyle smallbox">
+                    <div class="date"></div>
+                    <div class="month bignumber"></div>
+                    <div class="days bignumber"></div>
+                    <div class="time"></div>
+                </article>
+                <article id="weather-section" class="boxstyle smallbox">
+        
+                </article>
+            </div>
+            <!-- todolist section -->
+            <article id="todolist-section" class="boxstyle bigbox">
+                <h3>TODO LIST</h3>
+                
+                <form class="todolist-input-form" class="boxstyle">
+                    <input type="text" placeholder="할 일을 입력하세요.">
+                </form>
+                <div class="line"></div>
+                <ul id="todolist"></ul>
+            </article>
+            <!-- right -->
+            <div class="sidebox">
+                <article id="d-day-section" class="boxstyle smallbox">
+                    <h3>D-day</h3>
+                    <form>
+                        <input class="title" required type="text" placeholder="디데이의 이름을 적어주세요.">
+                        <input class="select-date" type="date" required>
+                        <button type="submit" class="button">디데이 등록</button>
+                    </form>
+                    
+                    <p class="hidden text-content">
+                        <span class="d-day-title"></span>
+                        <span class="bignumber"></span>
+                        <button type="submit" class="button">재설정</button>
+                    </p>
+                </article>
+                <article id="music-section" class="boxstyle smallbox">
+                    <div></div>
+                    <div class="play-button">
+                        <span class="before"></span> 
+                        <span class="play"></span>
+                        <span class="after"></span>
+                    </div>            
+                </article>
+            </div>
+            <!-- 명언 -->
             <div></div>
-            <form class="todolist-input-form">
-                <input type="text" placeholder="할 일을 입력하세요.">
-            </form>
-            <ul id="todolist"></ul>
-        </article>
-        <article id="d-day-section">
-            <h3>D-day</h3>
-            <form action="">
-                <input type="date">
-            </form>
-            <p class="hidden d-day-text"></p>
-        </article>
-        <article id="music-section">
-            <div></div>
-            <div class="play-button">
-                <span class="before"></span>
-                <span class="play"></span>
-                <span class="after"></span>
-            </div>            
-        </article>
-
+        </div>
     </section>
 
 
 
-    <script src="app.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/time.js"></script>
+    <script src="./js/background.js"></script>
+    <script src="./js/dDay.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,5 @@
+/* ////////date-section//////// */
+#date-section[data-mode = 'dark'] .month,
+#date-section[data-mode = 'dark'] .days{
+    color: #816B6B;
+}
