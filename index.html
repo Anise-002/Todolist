@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="login-container">
+        <form>
+            <h2>HELLO!<br> WELCOME TO TODONOTE!</h2>
+            <p>what's your nickname?</p> 
+            <input minlength="3" type="text" placeholder="Please, wirte here !">
+            <button type="submit">LOGIN</button>
+        </form>
+    </section>
+    <section class="todolist-container hidden">
+        <h1></h1>
+        <span>welcome!</span>
+        <article id="date-section">
+            <p class="month"></p>
+            <p class="date"></p>
+            <p class="times"></p>
+        </article>
+        <article id="weather-section">
+
+        </article>
+        <article id="todolist-section">
+            <h3>TODO LIST</h3>
+            <div></div>
+            <form class="todolist-input-form">
+                <input type="text" placeholder="할 일을 입력하세요.">
+            </form>
+            <ul id="todolist"></ul>
+        </article>
+        <article id="d-day-section">
+            <h3>D-day</h3>
+            <form action="">
+                <input type="date">
+            </form>
+            <p class="hidden d-day-text"></p>
+        </article>
+        <article id="music-section">
+            <div></div>
+            <div class="play-button">
+                <span class="before"></span>
+                <span class="play"></span>
+                <span class="after"></span>
+            </div>            
+        </article>
+
+    </section>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
