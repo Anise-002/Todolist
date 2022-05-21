@@ -1,4 +1,4 @@
-const whiteModeBackImg = ["0.jpg","1.jpg","2.jpg","3.jpg","4.jpg"];
+const whiteModeBackImg = ["0.jpg","1.jpg","2.jpg","3.jpg","4.jpg", "9.jpg", "10.jpg"];
 const darkModeBackImg = ["5.jpg","6.jpg","7.jpg","8.jpg"];
 const body = document.body;
 
