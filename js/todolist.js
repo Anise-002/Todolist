@@ -7,10 +7,39 @@
     let todoListArr = [];
 
     const TODO_KEY = "todo";
+    const LINE_THROUGH = "through-line";
+    const NOCOLOR = "nocolor";
 
     function saveToDo(todo){
         localStorage.setItem(TODO_KEY, JSON.stringify(todo));
     } 
+
+    
+    //checkBox 클릭 실행 함수
+    function drawingLine(e){
+        const text = e.target.parentElement.parentElement;
+        console.log(text);
+        const checkBox = e.target.parentElement;
+        if(text.classList.contains(LINE_THROUGH)){
+            text.classList.remove(LINE_THROUGH);
+            todoListArr.forEach(function(element){
+                if(element.id === parseInt(text.id)){
+                    element.class = "";
+                }
+            }); 
+            saveToDo(todoListArr);
+            checkBox.classList.remove(NOCOLOR); 
+        }else{
+            text.classList.add(LINE_THROUGH);
+            todoListArr.forEach(function(element){
+                if(element.id === parseInt(text.id)){
+                    element.class = LINE_THROUGH;
+                }
+            });        
+            checkBox.classList.add(NOCOLOR);
+            saveToDo(todoListArr);
+        }
+    }
 
     function deleteHnadler(e){
         const li = e.target.parentElement.parentElement;
@@ -20,18 +49,35 @@
         li.remove();
     }
 
-    function showHtml(todo){
+    function showHtml(todo){  
         //li 생성
         const li = document.createElement('li');
         li.id = todo.id;
-        li.innerText = todo.text;
+        li.innerHTML = `<div>${todo.text}</div>`;
+        //checkBox span 생성
+        const checkBox = document.createElement('span');
+        checkBox.innerHTML = `<i class="fas fa-check"></i>`;
+        // delete span 생성
         const span = document.createElement('span');
+        span.classList.add('color');
         span.innerHTML = `<i class="fas fa-minus-circle"></i>`;
+
+        if(todo.class === LINE_THROUGH){
+            li.classList.add(todo.class);
+            checkBox.classList.add(NOCOLOR);
+        }else{
+            li.class = "";
+        }
+        //조합
+        li.prepend(checkBox);
         li.appendChild(span);
         todoList.appendChild(li);
 
-        //list 삭제
+        //삭제 이벤트
         span.addEventListener('click',deleteHnadler);
+        //checkBox 클릭 이벤트
+        checkBox.addEventListener('click', drawingLine);
+
     }
 
     function submitHandler(e){
@@ -39,7 +85,7 @@
         const todoInputValue = todoInput.value;
         const todoObject = {
             text : todoInputValue,
-            id : Date.now()
+            id : Date.now(),
         }
         todoInput.value = null;
         showHtml(todoObject);
@@ -54,6 +100,7 @@
 
     if(savedToDo !== null){
         parseToDo = JSON.parse(savedToDo); //문자 -> 배열
+        console.log(parseToDo);
         todoListArr = parseToDo;
         todoListArr.forEach(showHtml);
     }

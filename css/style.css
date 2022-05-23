@@ -157,14 +157,30 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-align: left;
     font-size: 17px;
     padding: 5px 20px;
 }
+#todolist-section ul li div{
+    width: 80%;
+    text-align: left;
+}
+#todolist-section ul li.through-line{
+    color: rgb(132, 132, 132);
+    text-decoration-line: line-through;
+}
 #todolist-section ul li span i{
-    font-size: 20px;
+    font-size: 14px;
+    color: red;
+    cursor: pointer;
+}
+#todolist-section ul li span.color i{
+    font-size: 18px;
     color: aquamarine;
     text-shadow: 1px 1px 1px rgba(0 , 0 ,0, 0.42);
+    cursor: pointer;
+}
+#todolist-section ul li span.nocolor i{
+    color: rgb(132, 132, 132);
     cursor: pointer;
 }
 /* ////////date-section//////// */
