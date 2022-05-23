@@ -2,7 +2,12 @@
 /* font-family: 'Kaushan Script', cursive;
 font-family: 'Rock Salt', cursive;
 font-family: 'Shrikhand', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@800&display=swap');
+/* font-family: 'Hahmlet', serif; */
 
+*{
+    font-family:'Shrikhand','Hahmlet' ;
+}
 
 body{
     background-repeat: no-repeat;
@@ -16,7 +21,6 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
-    font-family: 'Shrikhand', cursive;
     background: url(../img/0.jpg) no-repeat;
     background-size: cover;
 }
@@ -60,7 +64,7 @@ body{
 .boxstyle{
     background-color: rgba(255, 255, 255, 0.518);
     border-radius: 25px;
-    box-shadow: 2px 2px 5px rgba(0 , 0 ,0, 0.42);
+    box-shadow: 2px 2px 5px rgba(0 , 0 ,0, 0.42), inset 2px 2px 8px rgb(255, 255, 255);
     padding: 20px;
 }
 .smallbox{
@@ -92,27 +96,19 @@ body{
     box-shadow: 2px 2px 5px rgba(0 , 0 ,0, 0.42);
     background-color: aquamarine;
     transform: translateX(-50%);
-    font-family: 'Kaushan Script', cursive;
     cursor: pointer;
 }
-/* todolist-section */
 
+/*---------- todolist-container-------------- */
 .todolist-container{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    font-family: 'Shrikhand', cursive; 
-}
-#todolist-content{
-    display: flex;
-    justify-content: center;
-    text-align: center;
 }
 .uesername{
     text-align: center;
 }
 .uesername h1{
-    font-family: 'Shrikhand', cursive;
     font-size: 170px;
     margin-top: 25px
 }
@@ -122,7 +118,15 @@ body{
     color: red;
     margin-top: -130px;
 }
-/* ////////todolis-section//////// */
+
+/* ////todolist-content //////*/
+#todolist-content{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* ////////todolist-section//////// */
 #todolist-section{
     display: flex;
     flex-direction: column;
@@ -146,7 +150,23 @@ body{
     box-shadow: inset 2px 2px 5px rgba(0 , 0 ,0, 0.42);
     text-align: center;
 }
-
+#todolist-section ul{
+    width: 90%;
+}
+#todolist-section ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    font-size: 17px;
+    padding: 5px 20px;
+}
+#todolist-section ul li span i{
+    font-size: 20px;
+    color: aquamarine;
+    text-shadow: 1px 1px 1px rgba(0 , 0 ,0, 0.42);
+    cursor: pointer;
+}
 /* ////////date-section//////// */
 #date-section .date{
     font-family: 'Kaushan Script', cursive;
@@ -169,12 +189,7 @@ body{
 #d-day-section h3{
     font-size: 45px;
 }
-#d-day-section form {
-    
-    
-}
 #d-day-section form .title{
-    font-family: 'Shrikhand', cursive;
     width: 100%;
     height: 30px;
     text-align: center;
@@ -188,10 +203,8 @@ body{
     border: none;
     border-radius: 20px;
     box-shadow: inset 2px 2px 2px rgba(0 , 0 ,0, 0.42);
-    font-family: 'Shrikhand', cursive;
     padding: 10px 20px;
     margin-top: 25px;
-
 }
 
 #d-day-section .text-content span:nth-child(1){
@@ -200,5 +213,24 @@ body{
 }
 #d-day-section .text-content span:nth-child(2){
     display: block;
+    margin-top: -20px;
+}
+/* ////////weather-section//////// */
+
+#weather-section h3{
+    font-size: 30px;
+}
+#weather-section .success{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+#weather-section .success img{
+    width: 70%;
+    margin-top: -30px;
+}
+#weather-section .success .weather{
+    font-size: 20px;
     margin-top: -20px;
 }
