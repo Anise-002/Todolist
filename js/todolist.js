@@ -6,10 +6,16 @@
 
     let todoListSave = [];
 
+    function deleteHnadler(e){
+        const li = e.target.parentElement.parentElement;
+        li.remove();
+    }
+
     function submitHandler(e){
         e.preventDefault();
         const todoInputValue = todoInput.value;
         todoInput.value = null;
+        //li 생성
         const li = document.createElement('li');
         li.innerText = todoInputValue;
         todoListSave.push(todoInputValue);
@@ -17,6 +23,9 @@
         span.innerHTML = `<i class="fas fa-minus-circle"></i>`;
         todoList.appendChild(li);
         li.appendChild(span);
+
+        //list 삭제
+        span.addEventListener('click',deleteHnadler);
     }
 
 
