@@ -8,7 +8,7 @@ const monthWord = ["JAN", "FEB", "MAR", "APR", "MAY", "JUNE", "JUL", "AUG" , "SE
 function timeDate(){
     const date = new Date();
     fullDate.innerHTML =`${date.getFullYear()} - ${date.getDate()} - ${monthWord[date.getMonth()]}`
-    month.innerHTML = String(date.getMonth()).padStart(2,"0");
+    month.innerHTML = String(date.getMonth()+1).padStart(2,"0");
     days.innerHTML = String(date.getDate()).padStart(2,"0");
     const hours = String(date.getHours()).padStart(2,"0");
     const minutes = String(date.getMinutes()).padStart(2,"0");
