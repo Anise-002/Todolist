@@ -10,7 +10,10 @@ font-family: 'Shrikhand', cursive; */
 }
 
 body{
+    width: 100vw;
+    height: 100vh;
     position: relative;
+    overflow: hidden;
     background-repeat: no-repeat;
     background-size: cover;
     transition: 1.5s linear;
@@ -262,4 +265,20 @@ body{
 #weather-section .success .weather{
     font-size: 20px;
     margin-top: -20px;
+}
+
+#advice-section{
+    display: flex;
+    flex-direction: column;
+    align-items: cetner;
+}
+#advice-section h3{
+    font-size: 30px;
+    margin-top: 10px;
+}
+#advice-section .advice{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
