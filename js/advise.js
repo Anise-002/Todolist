@@ -10,7 +10,7 @@
         fetch(url)
         .then((response) => response.json())
         .then((data)=>{
-            const getAdvice = data.slip.advice;
+            let getAdvice = data.slip.advice;
             title.innerText = getAdvice;
         })
     }

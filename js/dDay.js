@@ -61,8 +61,6 @@
 
     const saveDate = new Date(localStorage.getItem('saveDate'));
     const getTitle = localStorage.getItem(D_TITLE);
-    const savedSIZE =  localStorage.getItem(SIZE);
-    const savedMARGINTOP =  localStorage.getItem(MARGINTOP);
     
     if(saveDate === null){
         dDayForm.classList.remove(HIDDEN);
@@ -71,21 +69,12 @@
     }else{
         //디데이 현재 날짜로 다시 계산
         const today = new Date();
-        const dDay = localStorage.getItem(D_DAY);
         const distance = saveDate - today - (1000 * 60 * 60 *9);
         const day = Math.ceil(distance / (1000 * 60 * 60 * 24));
         dDayForm.classList.add(HIDDEN);
         dDayTextCon.classList.remove(HIDDEN);
         dDayTitle.innerText = getTitle;
-        if(day === 0){
-            dDayNumber.innerText = dDay;
-            dDayNumber.style.fontSize = savedSIZE;
-            dDayNumber.style.marginTop = savedMARGINTOP
-        }else{
-            dDayNumber.innerText = day;
-            dDayNumber.style.fontSize = savedSIZE;
-            dDayNumber.style.marginTop = savedMARGINTOP;
-        }
+        showDday(day);
 
     }
 
