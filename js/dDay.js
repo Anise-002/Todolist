@@ -16,6 +16,7 @@
     const SIZE = "Size";
     const TODAY_DDAY = `Today is D-day`;
     const MARGINTOP = "marginTop";
+    const SAVEDATE = 'saveDate';
 
 
 //디데이 계산 이벤트
@@ -59,10 +60,10 @@
     
 //로컬 저장소에서 값 가져오기
 
-    const saveDate = new Date(localStorage.getItem('saveDate'));
+    const saveDate = new Date(localStorage.getItem(SAVEDATE));
     const getTitle = localStorage.getItem(D_TITLE);
     
-    if(saveDate === null){
+    if(localStorage.getItem(SAVEDATE) === null){
         dDayForm.classList.remove(HIDDEN);
         dDayTextCon.classList.add(HIDDEN);
         dDayForm.addEventListener("submit", dDaySubmit);
@@ -75,7 +76,6 @@
         dDayTextCon.classList.remove(HIDDEN);
         dDayTitle.innerText = getTitle;
         showDday(day);
-
     }
 
 //리셋버튼 이벤트
