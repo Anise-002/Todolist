@@ -6,10 +6,10 @@ const body = document.body;
 function changeBackground(){
     if(body.dataset.mode == "dark" ){
         const darkBack = darkModeBackImg[Math.floor(Math.random() * darkModeBackImg.length)];
-        body.style.backgroundImage = `url(/img/${darkBack})`;
+        body.style.backgroundImage = `url(img/${darkBack})`;
     }else if(body.dataset.mode === "white"){
         const whiteBack = whiteModeBackImg[Math.floor(Math.random() * whiteModeBackImg.length)];
-        body.style.backgroundImage = `url(/img/${whiteBack})`;
+        body.style.backgroundImage = `url(img/${whiteBack})`;
     }
 }
 
