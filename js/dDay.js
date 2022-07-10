@@ -42,24 +42,24 @@
         let ChangeFont;
         let ChangeMargin;
         if(date === 0){
-            ChangeFont = "30px";
-            ChangeMargin = "20px";
-            dDayNumber.style.fontSize = ChangeFont;
-            dDayNumber.style.marginTop = ChangeMargin;
             dDayNumber.innerText = TODAY_DDAY;
             localStorage.setItem(D_DAY,TODAY_DDAY);
-            localStorage.setItem(SIZE,ChangeFont);
-            localStorage.setItem(MARGINTOP,ChangeMargin);
         }else{
+            if(window.innerWidth > 1919){
+                ChangeFont = "100px";
+                ChangeMargin = "-10px";
+            }else{
+                ChangeFont = "56px";
+                ChangeMargin = "0px";
+            }
             dDayNumber.innerText = date;
-            localStorage.setItem(SIZE,ChangeFont);
-            localStorage.setItem(MARGINTOP,ChangeMargin);
+            dDayNumber.style.fontSize = ChangeFont;
+            dDayNumber.style.marginTop = ChangeMargin;
         }
         dDayTextCon.classList.remove(HIDDEN);
     }
     
 //로컬 저장소에서 값 가져오기
-
     const saveDate = new Date(localStorage.getItem(SAVEDATE));
     const getTitle = localStorage.getItem(D_TITLE);
     

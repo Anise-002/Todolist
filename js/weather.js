@@ -26,10 +26,6 @@
             weatherText.innerText = weather;
             tempText.innerText = `${tempMax}°C / ${tempMin}°C`;
         });
-        
-        
-        
-        
     }
     function error(){
         errorText.innerText = `I couldn't find where you live.`;

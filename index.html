@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TODONOTE</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/darkmode.css">
     <link rel="stylesheet" href="css/media.css">
 </head>
+
 <body data-mode="white">
-<!-- 설정 버튼 -->
+    <!-- 설정 버튼 -->
     <div class="setting">
         <div></div>
         <div></div>
     </div>
-<!-- 로그인창 -->
+    <!-- 로그인창 -->
     <section class="login-container">
         <form>
             <h2>HELLO!<br> WELCOME TO TODONOTE!</h2>
-            <p>what's your nickname?</p> 
+            <p>what's your nickname?</p>
             <input minlength="1" maxlength="10" required type="text" placeholder="Please, wirte here !">
             <button type="submit">LOGIN</button>
         </form>
     </section>
-<!-- 로그인 후 창 -->
+    <!-- 로그인 후 창 -->
     <section class="todolist-container hidden">
         <article class="uesername">
             <h1></h1>
@@ -71,16 +73,15 @@
                         <input class="select-date" type="date" required>
                         <button type="submit" class="button">디데이 등록</button>
                     </form>
-                    
                     <p class="hidden text-content">
                         <span class="d-day-title"></span>
                         <span class="bignumber"></span>
                         <button type="submit" class="button">재설정</button>
                     </p>
                 </article>
-                <article id="advice-section" class="boxstyle smallbox">   
-                      <h3>Today Advice</h3>
-                    <div class="advice"></div>   
+                <article id="advice-section" class="boxstyle smallbox">
+                    <h3>Today Advice</h3>
+                    <div class="advice"></div>
                 </article>
             </div>
         </div>
@@ -97,4 +98,5 @@
     <script src="./js/advise.js"></script>
 
 </body>
+
 </html>

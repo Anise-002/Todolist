@@ -17,6 +17,7 @@ function submitHandler(event){
     todolistCon.classList.remove(HIDDEN);
     localStorage.setItem(USERNAME_KEY, loginInput.value);
     todoUsername.innerText = loginInput.value;
+    todolistCon.style.display = 'flex';    
 }
 
 
@@ -26,7 +27,6 @@ if(saveName === null){
     todoUsername.innerText = saveName;
     loginCon.classList.add(HIDDEN);
     todolistCon.classList.remove(HIDDEN);
-    
 }
 
 loginForm.addEventListener("submit", submitHandler);
